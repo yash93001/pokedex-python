@@ -25,11 +25,11 @@ print("Pokedex\n")
 print("Welcome Pokemon Lovers\n")
 print("Search for a pokemon\n")
 df1 =input("<A>Search by pokemon name\n<B>Search by pokemon ID\n(select A or B)\n")
-df1.upper()
+df1 = df1.upper()
 if(df1=="A"):
     print("Enter the name of the pokemon")
     name = input()
-    name.lower().strip()
+    name = name.lower().strip()
     dt = data[:].where(data['pokemon']==name)
     idx = dt.index[dt['pokemon']==name]
     st = dt[dt['id'].notnull()]    
